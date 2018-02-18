@@ -2,7 +2,7 @@ SUDOKU solver
 
 
 Stages Planned :
-1. [ ] Reading a Sudoku table in a stream format
+1. [x] Reading a Sudoku table in a stream format
 2. [ ] Pretty printing a su-do-ku in the desired format
 3. [ ] Checking for a valid su-do-ku matrix
 	1. [ ] Row by Row checking
