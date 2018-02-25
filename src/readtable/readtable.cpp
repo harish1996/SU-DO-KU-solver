@@ -4,6 +4,7 @@
 #include <errno.h>
 #include <string.h>
 #include <stdlib.h>
+#include "prettyprint.h"
 
 
 using namespace std;
@@ -71,16 +72,7 @@ int main( int argc , char* argv[] )
 		goto out1;
 	}
 	if( ( table=get_sudoku_table( fp ) ) != NULL ){
-		for( int i=0 ; i<9 ; i++ ){
-			for( int j=0; j<9 ; j++){
-				temp = *( table + (i*9) + j);
-				if ( temp == '0' ){
-					temp = ' ';
-				}
-				cout << temp << " ";
-			}
-			cout << "\n";
-		}
+		print_table( table );
 		free(table);
 	}
 	fclose( fp );
